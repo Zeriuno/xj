@@ -8,8 +8,8 @@ class Num_Sec_Soc {
     ch=Saisie.lire_String("Entrez votre numéro de Sécurité sociale : ") ; /*Nécessite de la classe lire_String, ou bien doit être remplacé par un Scanner*/
   }
   public void interprete_sexe() {
-    int sexe=Integer.prseInt(ch.substring(0,1))         ;
-    if (sexe == 1) Systemout.println("Bonjour Monsieur");
+    int sexe=Integer.parseInt(ch.substring(0,1))         ;
+    if (sexe == 1) System.out.println("Bonjour Monsieur");
     else System.out.println("Bonjour Madame")           ;
   }
   public void interprete_annee() {
