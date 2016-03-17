@@ -1,5 +1,5 @@
-
-public class Bibliotheque {
+public class Bibliotheque
+{
 	
 	int capacite;
 	Livre[] rangement;
@@ -20,14 +20,15 @@ public class Bibliotheque {
 	
 	public String toString(){
 		String s = "";
-		for(int i = 0 ; i < capacite ; i++){
-			if(rangement[i] != null){
+		for(int i = 0 ; i < capacite ; i++)
+		{
+			if(rangement[i] != null)
+			{
 				s+=rangement[i];
 			}
 		}
 		return s ;
 		}
-	}
 	
 	//ajout(Livre)
 	
@@ -45,7 +46,7 @@ public class Bibliotheque {
 		 *  return false;
 		 *   }
 		 * */
-		while(rangement[i] == null)
+		while(rangement[i] != null)
 		{
 			i++;
 		}
@@ -80,18 +81,24 @@ public class Bibliotheque {
 				trouve = false;
 			}	
 		}
-			
 		return trouve;
 	}
+	
 	//retire(Livre)
 	
-	public void retire(Livre livre){
-		while(estPresent(livre)){
-			
+	public void retire(Livre livre)
+	{
+		if(estPresent(livre))
+		{
+		for(int i = 0 ; i < capacite ; i++)
+		{
+			if(rangement[i] == livre)
+			{
+				rangement[i] = null;
+			}
 		}
+		}
+		else
+			System.out.println("Livre non présent dans la bibliothèque.");
 	}
-	
-		
-	public 
-*/	
 }
