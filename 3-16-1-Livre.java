@@ -61,6 +61,8 @@ public class Livre
 		{
 			this.nbrPage = nbrPage;
 		}
+		else
+			System.out.println("Erreur, le nombre de pages ne peut pas être changé.");
 	}
 	
 	//méthode String toString() qui retourne "Livre, Auteur, paru en annee. nbrPagep."
