@@ -5,7 +5,8 @@
  * int nbrPage
  */
 
-public class Livre {
+public class Livre
+{
 	
 	String titre;
 	String auteur;
@@ -64,18 +65,20 @@ public class Livre {
 	
 	//méthode String toString() qui retourne "Livre, Auteur, paru en annee. nbrPagep."
 	
-	public String toString(){
-		return this.titre + ", "
-	           + this.auteur 
-	           + ", paru en " 
-	           + this.anneeParution 
-	           + ". ";//voire comment le faire avec ternaire
-		if (this.nbrPage != 0) ?:
-	        	   + this.nbrPage + "p.");
+	public String toString()
+	{
+		StringBuilder result = new StringBuilder();
+		result = result.append(this.titre)  ;
+		result = result.append(", ")        ;
+		result = result.append(this.auteur) ;
+		result = result.append(", paru en ");
+		result = result.append(this.anneeParution);
+		if(this.nbrPage !=0)
+		{
+			result = result.append(this.nbrPage);
+			result = result.append("p");
+		}
+		result = result.append(".");
+	    return result.toString();
 	}
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
 }
