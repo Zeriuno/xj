@@ -73,7 +73,7 @@ public class Compte {
 		{
 			if(this.test(montant))
 			{
-				this.soldeCompte -= montant ;
+				this.soldeCompte += montant ;
 				this.decouvActuel()         ;
 				return true                 ;
 			}
