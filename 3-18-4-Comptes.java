@@ -82,11 +82,13 @@ public class Compte {
 		}
 	}
 	
-	public boolean virmt(float montant, int rib)
+	public boolean virmt(float montant, Compte beneficiaire)
 	{
 		if(this.mouvmt(montant))
 		{
 			this.decouvActuel() ;
+			this.mouvmt(-montant);
+			beneficiaire.mouvmt(montant);
 			return true  ;
 		}
 		else
