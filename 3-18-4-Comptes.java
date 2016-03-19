@@ -43,7 +43,7 @@ public class Compte {
 		 * Le découvert est un montant positif, pour le 
 		 * confronter avec le solde, multiplication par -1
 		 */
-		if((this.soldeCompte + montant) < (decouvMax * -1))
+		if((this.soldeCompte + montant) > (decouvMax * -1))
 		    return true  ;
 		else
 		    return false ;
