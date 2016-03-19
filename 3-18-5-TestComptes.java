@@ -11,15 +11,15 @@ public class TestCompte {
 	System.out.println(c1) ;
 	System.out.println(c2) ;
 	
-	c1.mouvmt(-300) ;
-	c2.mouvmt(-600) ;
-	c1.mouvmt(500)  ;
+	System.out.println(c1.mouvmt(-300)) ;
+	System.out.println(c2.mouvmt(-600)) ;
+	System.out.println(c1.mouvmt(500))  ;
 	
 	System.out.println(c1) ;
 	System.out.println(c2) ;
-	/*
+	System.out.println(c2.virmt(1000, c1));
 	System.out.println(c1) ;
-	System.out.println(c2) ;*/
+	System.out.println(c2) ;
 	
 	}
 }
