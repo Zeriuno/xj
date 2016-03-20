@@ -33,9 +33,9 @@
   Si oui, l'opération est exécutée, le solde est mis à jour, le découvert actuel également.
 
 * virement<br>
-  `boolean virmt(float montant, int rib)`<br>
+  `boolean virmt(float montant, Compte beneficiaire)`<br>
   `true`: opération effectuée.<br>
   `false`: opération impossible.<br>
-  Le montant est soustrait au compte par le bais de la fonction de mouvement de compte.
-* consulter : num, tit, soldeCompte, montantdécMax, montantdebMax.<br>
+  Le montant est soustrait au compte appellant par le bais de la fonction de mouvement de compte. Le compte appelé dans la fonction (`beneficiaire`), reçoit le montant.
+* consulter : `num`, `tit`, `soldeCompte`, `montantdécMax`, `montantdebMax`.<br>
   Ce sont de simples getters, tous sans arguments, chacun renvoie le type qui lui correspond.
