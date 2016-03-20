@@ -1,15 +1,17 @@
-1
----
+# TP Comptes
 
-Compte:
-  * numéro de compte (unique)
-  * nom du titulaire
-  * solde du compte
-  * découvert actuel
-  * découvert maximal
-  * débit maximal
 
-Méthodes publiques
+## Compte
+
+
+  * numéro de compte (unique)<br>
+  * nom du titulaire<br>
+  * solde du compte<br>
+  * découvert actuel<br>
+  * découvert maximal<br>
+  * débit maximal<br>
+
+## Méthodes publiques
 
 * création de compte.<br>
   Par défaut le découvert maximal est à 800€ et le débit maximal 1000€.
