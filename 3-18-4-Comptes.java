@@ -6,17 +6,18 @@ public class Compte {
 	private float decouv        ;
 	private float decouvMax     ;
 	private float debitMax      ;
-	private int compteur        ;
+	
+	private static int compteur = 1 ;
 	//compteur
 	
 	//costructeurs
 	public Compte(String nomTitulaire)
 	{
 		this.nomTitulaire = nomTitulaire ;
-		decouvMax = 800                  ;
-		debitMax = 1000                  ;
-		numCompte = compteur             ;
-		compteur++                       ;
+		this.decouvMax = 800             ;
+		this.debitMax = 1000             ;
+		this.numCompte = Compte.compteur ;
+		Compte.compteur++                ;
 	}
 	
 	public Compte(String nomTitulaire, float depotCompte)
