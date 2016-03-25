@@ -1,5 +1,6 @@
 # TP Comptes
 
+ajouter une classe "banque" qui contient un ArrayList de Compte comme attribut et quelques méthodes de manipulation.
 
 ## Compte
 
