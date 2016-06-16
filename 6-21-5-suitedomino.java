@@ -14,7 +14,7 @@ public class SuiteDomino {
 		{
 			if(tesselle.compatible(suite.get(0)))
 			{
-				
+				suite.add(0, tesselle);
 			}
 			else
 			{
