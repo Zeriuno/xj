@@ -19,7 +19,14 @@ public class SuiteDomino {
 			}
 			else
 			{
-				if
+				if(tesselle.compatibleInverse(suite.get(0)))
+				{
+					tesselle.inverseDomino() ;
+					suite.add(0, tesselle)   ;
+					return true              ;
+				}
+				else
+					return false             ;
 			}
 		}
 	}
