@@ -31,6 +31,30 @@ public class SuiteDomino {
 		}
 	}
 	
+	public boolean ajoutTesselleFin(Domino tesselle)
+	{
+		if(suite.get(suite.size()-1).compatible(tesselle))
+		{
+			suite.add(tesselle) ;
+			return true         ;
+		}
+		else
+		{
+			tesselle.inverseDomino() ;
+			if(suite.get(suite.size() -1).compatible(tesselle))
+			{
+				suite.add(tesselle)  ;
+				return true          ;
+			}
+			else
+			{
+				tesselle.inverseDomino() ;
+				return false             ;
+			}
+		}
+	}
+	
+	
 //	public void 
 
 }
