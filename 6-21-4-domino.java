@@ -55,6 +55,19 @@ public class Domino {
 		}
 	}
 	
+	//constructeurs joker
+	
+	public Domino DominoJoker()
+	{
+		Domino joker = new Domino() ;
+		this.gauche = 42            ;
+		this.droite = 42            ;
+		return joker                ;
+	}
+	
+	
+	//autres méthodes
+	
 	public void inverseDomino()
 	{
 		int temp                  ;
@@ -81,7 +94,6 @@ public class Domino {
 		return a;
 		
 	}
-
 		
 	public String toString(){
 		StringBuilder sb = new StringBuilder();
