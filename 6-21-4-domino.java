@@ -73,6 +73,18 @@ public class Domino {
 		return joker                ;
 	}
 	
+	public Domino DominoJoker(int gauche, boolean tourne)
+	{
+		Domino joker = new Domino() ;
+		this.gauche = gauche        ;
+		this.droite = 42            ;
+		if(tourne)
+		{
+			joker.inverseDomino()   ;
+		}
+		return joker                ;
+	}
+	
 	
 	
 	//autres méthodes
