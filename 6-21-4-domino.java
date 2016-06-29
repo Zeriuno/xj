@@ -65,6 +65,15 @@ public class Domino {
 		return joker                ;
 	}
 	
+	public Domino DominoJoker(int gauche)
+	{
+		Domino joker = new Domino() ;
+		this.gauche = gauche        ;
+		this.droite = 42            ;
+		return joker                ;
+	}
+	
+	
 	
 	//autres méthodes
 	
