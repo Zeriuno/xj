@@ -1,4 +1,3 @@
-
 public class Domino {
 	
 	int droite, gauche ;
@@ -6,57 +5,78 @@ public class Domino {
 	// constructeurs
 	
 	public Domino() {
-		// TODO Auto-generated constructor stub
+		this.gauche = 0 ;
+		this.droite = 0 ;
 	}
 	
 	public Domino(int gauche)
 	{
-		this.gauche = gauche ;
+		if((-1 < gauche) && (gauche < 7))
+		{
+			this.gauche = gauche ;
+			this.droite = 0      ;
+		}
+		else
+			System.out.println("Erreur. Les valeurs d'un domino sont entre 0 et 6 uniquement.");
 	}
 	
-	public Domino(int gauche, boolean tourne)
+	public Domino(int gauche, boolean tourne) // cela permet de créer un domino en donnant uniquement la valeur de droite: 'new Domino(3, true)'
 	{
-		this(gauche);
+		this(gauche)        ;
 		if(tourne)
 		{
-			inverseDomino();
+			inverseDomino() ;
 		}
 	}
 	
 	
 	public Domino(int gauche, int droite)
 	{
-		this(gauche);
-		this.droite = droite ;
+		if((-1 < gauche) && (gauche < 7))
+		{
+			if((-1 < droite) && (droite < 7))
+			{
+				this.gauche = gauche ;
+				this.droite = droite ;
+			}
+			else
+				System.out.println("Erreur. Les valeurs d'un domino sont entre 0 et 6 uniquement.");			
+		}
+		else
+			System.out.println("Erreur. Les valeurs d'un domino sont entre 0 et 6 uniquement.")    ;
 	}
 	
-	public Domino(int gauche, int droite, boolean tourne)
+	public Domino(int gauche, int droite, boolean tourne) //on passe les arguments dans un ordre, il seront stockés dans l'objet en ordre inverse 
 	{
-		this(gauche, droite);
+		this(gauche, droite) ;
 		if(tourne)
 		{
-			inverseDomino();
+			inverseDomino()  ;
 		}
 	}
 	
 	public void inverseDomino()
 	{
-		int temp ;
-		temp = this.gauche ;
+		int temp                  ;
+		temp = this.gauche        ;
 		this.gauche = this.droite ;
-		this.droite = temp ;
+		this.droite = temp        ;
 	}
 	
 	public boolean compatible(Domino tesselle)
 	{
 		if(this.droite == tesselle.droite)
 		{
-			return true;
+			return true  ;
 		}
 		else
-			return false;
-		
-		
+			return false ;
 	}
-
+		
+	public String toString(){
+		StringBuilder sb = new StringBuilder();
+		sb.append("[" + this.gauche + "," + this.droite + "]");
+		String s = sb.toString();
+	return s;	
+	}
 }
