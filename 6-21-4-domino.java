@@ -72,12 +72,16 @@ public class Domino {
 		else
 			return false ;
 	}
-	
-	public boolean compatibleInverse(Domino tesselle, boolean true)
+
+	public boolean compatibleInverse(Domino tesselle)
 	{
+		this.inverseDomino()     ;
+		boolean a = this.compatible(tesselle);
+		this.inverseDomino(); //on va tester la compatibilité pour avoir une information, mais on ne va pas inverser la tesselle à la fin du test
+		return a;
 		
 	}
-	
+
 		
 	public String toString(){
 		StringBuilder sb = new StringBuilder();
