@@ -1,8 +1,6 @@
 L'objectif du TP est de gérer des dominos et une suite de domino.
 
-
 Un domino est constitué de deux chiffres compris entre 0 et 6 inclus représentés par x et y ou alors d'aucun chiffre.
-
 
 Par exemple [4,5] représente le domino qui contient 4 à un bord et 5 à l'autre.
 
