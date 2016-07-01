@@ -65,13 +65,19 @@ public class Domino {
 	
 	public boolean compatible(Domino tesselle)
 	{
-		if(this.droite == tesselle.droite)
+		if(this.droite == tesselle.gauche)
 		{
 			return true  ;
 		}
 		else
 			return false ;
 	}
+	
+	public boolean compatibleInverse(Domino tesselle, boolean true)
+	{
+		
+	}
+	
 		
 	public String toString(){
 		StringBuilder sb = new StringBuilder();
