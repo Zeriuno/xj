@@ -11,7 +11,7 @@ public class Domino {
 	
 	public Domino(int gauche)
 	{
-		if((-1 < gauche) && (gauche < 7))
+		if(((-1 < gauche) && (gauche < 7)) || (gauche == 42))
 		{
 			this.gauche = gauche ;
 			this.droite = 0      ;
@@ -32,9 +32,9 @@ public class Domino {
 	
 	public Domino(int gauche, int droite)
 	{
-		if((-1 < gauche) && (gauche < 7))
+		if(((-1 < gauche) && (gauche < 7)) || (gauche == 42))
 		{
-			if((-1 < droite) && (droite < 7))
+			if(((-1 < droite) && (droite < 7)) || (droite == 42))
 			{
 				this.gauche = gauche ;
 				this.droite = droite ;
@@ -54,41 +54,9 @@ public class Domino {
 			inverseDomino()  ;
 		}
 	}
-	
-	//constructeurs joker
-	
-	public Domino DominoJoker()
-	{
-		Domino joker = new Domino() ;
-		this.gauche = 42            ;
-		this.droite = 42            ;
-		return joker                ;
-	}
-	
-	public Domino DominoJoker(int gauche)
-	{
-		Domino joker = new Domino() ;
-		this.gauche = gauche        ;
-		this.droite = 42            ;
-		return joker                ;
-	}
-	
-	public Domino DominoJoker(int gauche, boolean tourne)
-	{
-		Domino joker = new Domino() ;
-		this.gauche = gauche        ;
-		this.droite = 42            ;
-		if(tourne)
-		{
-			joker.inverseDomino()   ;
-		}
-		return joker                ;
-	}
-	
-	
-	
+
 	//autres méthodes
-	
+
 	public void inverseDomino()
 	{
 		int temp                  ;
@@ -96,10 +64,10 @@ public class Domino {
 		this.gauche = this.droite ;
 		this.droite = temp        ;
 	}
-	
+
 	public boolean compatible(Domino tesselle)
 	{
-		if(this.droite == tesselle.gauche)
+		if((this.droite == tesselle.gauche) || ((this.droite == 42) || (tesselle.gauche == 42)))
 		{
 			return true  ;
 		}
