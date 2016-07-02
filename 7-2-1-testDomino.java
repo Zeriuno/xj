@@ -14,19 +14,23 @@ public class Main {
 		System.out.println(e)          ;
 		Domino f = new Domino(3,2)     ;
 		System.out.println(f)          ;
+		Domino g = new Domino(42, 42)  ;
+		System.out.println(g)          ;
+		Domino h = new Domino()        ;
+		System.out.println(h)          ;
+		Domino i = new Domino(2, 42)   ;
+		System.out.println(i)          ;
 		
 		SuiteDomino jeu = new SuiteDomino();
 		jeu.ajout(a)            ;
-		System.out.println(jeu) ;
 		jeu.ajout(b)            ;
-		System.out.println(jeu) ;
 		jeu.ajout(c)            ;
-		System.out.println(jeu) ;
 		jeu.ajout(d)            ;
-		System.out.println(jeu) ;
 		jeu.ajout(e)            ;
-		System.out.println(jeu) ;
 		jeu.ajout(f)            ;
+		jeu.ajout(g)            ;
+		jeu.ajout(h)            ;
+		jeu.ajout(i)            ;
 		System.out.println(jeu) ;
 	}
 }
