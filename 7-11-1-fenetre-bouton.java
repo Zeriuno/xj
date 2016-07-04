@@ -1,5 +1,5 @@
-import java.awt.Color;
 
+import java.awt.Color;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -12,7 +12,8 @@ public class Fenetre extends JFrame
 	JPanel pan = new JPanel();
 	//Un bouton
 	JButton bouton = new JButton("Bouton 1");
-	
+	//Bis
+	JButton boutonbis = new JButton("Bouton 2");
 	
 	public Fenetre()
 	{
@@ -29,6 +30,7 @@ public class Fenetre extends JFrame
 		
 		//ajout du bouton
 		pan.add(bouton);
+		pan.add(boutonbis);
 		//ajout du JPanel dans la fenêtre
 		this.setContentPane(pan);
 		
